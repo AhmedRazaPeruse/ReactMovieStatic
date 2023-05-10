@@ -1,0 +1,189 @@
+// import logo from './logo.svg';
+import './App.css';
+import Student from './components/Student';
+
+//import Header,{Footer} from './Header';
+// import {Header, Footer} from './Header';
+// import Header from './Header';
+// import Application from './Header';
+
+function App() {
+  //let name = "Web3Mantra"
+  return (
+    <div className="App">
+      <Student 
+        name="Ahmed Raza"
+        age={29} 
+      />
+
+      <Student 
+        name="Asgar Raza"
+        age={31} 
+      />
+
+      <Student 
+        name="Akbar Raza"
+        age={32} 
+      />
+
+    </div>
+  );
+}
+
+export default App;
+
+------------------------------------------------------------------
+// import logo from './logo.svg';
+import './App.css';
+import { Header } from './components/Header';
+import { Movie } from './components/Movie';
+import  movies from './movies.json';
+
+function App() {
+  let login = false;
+  
+  // if(login == false){
+  //   return <h1>Ja apna kam kar</h1>
+  // }
+
+  return (
+    <div className="App">
+      <Header />
+      <div className="main">
+      {
+          movies.map((element, index) => {
+            return (
+              <Movie 
+                    key={index}
+                    title={element.Title} 
+                    year={element.Year}
+                    img={element.Poster}
+              />
+             )
+          })
+      }          
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+------------------------------------------------------------------
+// import logo from './logo.svg';
+import './App.css';
+import { Header } from './components/Header';
+import { Movie } from './components/Movie';
+import  movies from './movies.json';
+
+function App() {
+  let login = true;
+
+  return (
+    <div className="App">
+      {
+        login == false ? <h1 style={{color:'black'}}>Ma Nhi 
+        dekhaonga</h1> : <div><h1 style={{color:'black'}}>Dekh bhai</h1></div>
+      }
+      <Header />
+      <div className="main">
+      {
+          movies.map((element, index) => {
+            return (
+              <Movie 
+                    key={index}
+                    title={element.Title} 
+                    year={element.Year}
+                    img={element.Poster}
+              />
+             )
+          })
+      }          
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+------------------------------------------------------------------
+// import logo from './logo.svg';
+import './App.css';
+import { Header } from './components/Header';
+import { Movie } from './components/Movie';
+import  movies from './movies.json';
+
+function App() {
+  let login = true;
+
+  return (
+    <div className="App">
+    
+    {
+      (() => {
+        if(login == true){
+          return <h1 style={{color:'black'}}>Dekho bhai</h1>
+        } else if (login == false) {
+          return <h1 style={{color:'black'}}>DeKho mat bhai</h1>
+        } else {
+          return <h1 style={{color:'black'}}>DeKho zara payar bhai</h1>
+        }
+      })()
+    }
+
+      <Header />
+      <div className="main">
+      {
+          movies.map((element, index) => {
+            return (
+              <Movie 
+                    key={index}
+                    title={element.Title} 
+                    year={element.Year}
+                    img={element.Poster}
+              />
+             )
+          })
+      }          
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+------------------------------------------------------------------
+
+
+//  export const Movie = (props) => {
+//   return (
+//     <div className="movie">      
+//       <img src={props.img} alt="" />   
+//       <p>{props.title}</p>
+//       <p>Year: {props.year}</p>          
+//     </div>
+//   )
+// }
+
+
+
+export const Movie = ({img, title, year}) => {
+  return (
+    <div className="movie">      
+      <img src={img} alt="" />   
+      <p>{title}</p>
+      <p>Year: {year}</p>          
+    </div>
+  )
+}
+
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------
