@@ -22,12 +22,41 @@
 
 .main {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 14pt;
+  height: 90vh;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading{
+  color: black;
+  font-size: 80px;
+  margin: 10px;
+}
+
+.btn{
+  background-color: rgb(66, 66, 238);
+  color: white;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* .main {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 14pt;
-}
+} */
 
-.movie {
+/* .movie {
   color: black;
   background-color: rgb(219, 212, 212);
   border: 1px solid gray;
@@ -37,7 +66,7 @@
   width: 22%;
   margin-top: 14pt;
   font-size: medium;
-}
+} */
 
 .movie img {
   max-width: 100%;
