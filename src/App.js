@@ -7,12 +7,12 @@ function App() {
   //Array DeStructuring
   const [num, setNum] = useState(1); 
 
-  function inc() {
-    setNum(num + 2);
+  function inc(n) {
+    setNum(num + n);
   }
 
-  function dec() {
-    setNum(num - 1);
+  function dec(n) {
+    setNum(num - n);
   }
 
   //Object DeStructuring Previous video
@@ -37,8 +37,8 @@ function App() {
       <div className='main'>      
         <h1 className='heading'>{num}</h1>  
         <div className='button'>
-          <button className="btn" onClick={inc}>increment</button>
-          <button className="btn" onClick={dec}>decrement</button>
+          <button className="btn" onClick={() => inc(1)}>increment</button>
+          <button className="btn" onClick={() => dec(2)}>decrement</button>
         </div>
       </div> 
     </div>
